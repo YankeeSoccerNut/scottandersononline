@@ -1,0 +1,29 @@
+@media (max-width: 1199px) {
+  #head-shot {
+    transform: scale(0.75); } }
+@media (max-width: 991px) {
+  #head-shot {
+    transform: scale(0.5); } }
+@media (min-width: 1200px) {
+  #head-shot {
+    transform: scale(1); } }
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0; }
+
+no-padding {
+  padding-left: 0;
+  padding-right: 0; }
+
+#head-shot {
+  border: 15px solid white;
+  border-radius: 100%;
+  margin-top: -105px;
+  width: 200px;
+  float: right; }
+
+.fa-youtube-play {
+  height: auto;
+  width: 10px; }
+
+/*# sourceMappingURL=style.css.map */
