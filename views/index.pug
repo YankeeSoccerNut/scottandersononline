@@ -1,51 +1,75 @@
 extends layout
 block content
     
-    img.img-fluid#banner-image(src="/images/resizedBostonHarbor3.jpg")
+    img.img-fluid.img-fill.rounded#banner-image(src="/images/resizedBostonHarbor3.jpg")
     img.img-fluid#head-shot(src="/images/scott_headshot.jpg")
     h2 Hi, I'm Scott 
     p I'm a Full Stack Web Developer with previous experience in enterprise systems.  I grew up in a small town just outside of Boston and have been living in Atlanta since 1995.  It's a great place to live and I absolutely love it here.
     p I've kept close to technology and have always been interested in doing more programming and application development.  In July 2017 I decided to go "full bore" and enrolled in DigitalCrafts's intensive, 16-week bootcamp program.  I graduate in January 2018 and 
-      span(style='font-weight:bold') I'm eager to build something great.
-    .featured-wrapper.clearfix
-      .featured
-        a(href="https://youtu.be/RFx8iMpX0Ws" target="_blank")
-          img(src="/images/you-tube-play-outline-red.png" alt="play meterMiser video")
-      h3 meterMiser
-        p meterMiser is a mobile-first web application that keeps small business owners  from wasting money on heating and cooling costs.  This project grew out of a real need for my wife's business.
-        p Watch the video below for a walkthrough of the app to see all the features in action. Check out some of our actual code as well
-        a(href="https://github.com/mcfarland422/MeterMiser_v2" target="_blank")
-          img(src="/images/Octocat.png" alt="access code on Github")
-      .featured-split
+      span(style='font-weight:bold') I want to continue building great things in software.
+    .h3.text-center#featured Featured Project:  meterMiser
+    .featured-wrapper
+      .featured.text-center#meter-miser-logo
+        img(src="/images/MeterMiserLogo.png" alt="meterMiser logo")
+      p meterMiser is a mobile-first web application that keeps small business owners  from wasting money on heating and cooling costs.  This project grew out of a real need for my wife's business.
+      p.text-center Watch the video below for a walkthrough of the app to see some key features in action.  You can click on the Octocat to explore the project on Github.
+        a(href="https://github.com/mcfarland422/MeterMiser_v2" target="_blank") 
+          img(src="/images/resizedOctocat.png" alt="access code on Github")
+      .featured-split.text-center
         .featured-split-video
           iframe.iframe-video(width=550, height=427, src="https://www.youtube.com/embed/0Ci2ssx67Fg?rel=0&amp;fs=0&amp;showinfo=0" frameborder="0" allowfullscreen="") 
         .featured-split-code
           .cp_embed_wrapper
-            iframe#cp_embed_awoEXr.cp_embed_iframe(src="//codepen.io/sandersonga/embed/dZJwgp?height=427&amp;theme-id=28433&amp;slug-hash=awoEXr&amp;default-tab=js%2Cresult&amp;user=juliemdyer&amp;embed-version=2&amp;pen-title=MoneyMapper" scrolling="no" frameborder="0" width=550 height=427 allowtransparency="true" allowfullscreen="true" name="CodePen Embed" title="meterMiser" overflow=" hidden")
+            iframe#cp_embed_featured.cp_embed_iframe(src="//codepen.io/sandersonga/embed/dZJwgp?height=427&amp;theme-id=28433&amp;slug-hash=awoEXr&amp;default-tab=js%2Cresult&amp;user=sandersonga&amp;embed-version=2&amp;pen-title=meterMiser" scrolling="no" frameborder="0" width=550 height=427 allowtransparency="true" allowfullscreen="true" name="CodePen Embed" title="meterMiser" overflow=" hidden")
           script(async="" src="https://production-assets.codepen.io/assets/embed/ei.js")
-    .portfolio-wrapper
-      .portfolio
-        h2 Sample Projects 
+    .portfolio-wrapper.text-center
+      .portfolio#portfolio
+        h3 Other Sample Projects 
         p Here's a set of sample projects.  If you have any feedback or would like to know about some other things I've done, just let me know!  My contact info can be found at the top and the bottom of this page.
         
-        .sample-project1
-          img.img-fluid(src="/images/snowheatmiser.png")
-          .overlay
-            h3 Project Sample 1 
-            br
-            | Technologies used: 
-            br
-            | Tech 1, Tech 2, Tech 3, Tech 4 
-            br
-            a(href="https://github.com/mcfarland422/MeterMiser_v2" target="_blank") 
-              button Git Hub
-            a(href="#" target="_blank")
-              button.code-button Show Code
-        .code.project1-code
-          button.hide-button(type="button") Hide Code 
-          .cp_embed_wrapper
-            iframe#cp_embed_awoEXr.cp_embed_iframe(src="//codepen.io/sandersonga/embed/dZJwgp?height=427&amp;theme-id=28433&amp;slug-hash=awoEXr&amp;default-tab=js%2Cresult&amp;user=juliemdyer&amp;embed-version=2&amp;pen-title=MoneyMapper" scrolling="no" frameborder="0" width=550 height=427 allowtransparency="true" allowfullscreen="true" name="CodePen Embed" title="meterMiser" overflow=" hidden")
-    .contact-wrapper
+        .row
+          .project.sample-project1.col-sm-6
+            .project1-block
+              iframe#cp_embed_project1.cp_embed_iframe.embed-responsive.embed-responsive-1by1(src="//codepen.io/sandersonga/embed/dZJwgp?height=427&amp;theme-id=28433&amp;slug-hash=awoEXr&amp;default-tab=js%2Cresult&amp;user=sandersonga&amp;embed-version=2&amp;pen-title=meterMiser" scrolling="no" frameborder="0" width=550 height=427 allowtransparency="true" allowfullscreen="true" name="CodePen Embed" title="meterMiser" overflow=" hidden")
+            .overlay
+              a(href="https://github.com/mcfarland422/MeterMiser_v2" target="_blank") 
+                img(src="/images/resizedOctocat.png" alt="access code on Github")
+              h3 Project Sample 1 
+              p Technologies used: 
+              br
+              | Tech 1, Tech 2, Tech 3, Tech 4 
+          .project.sample-project2.col-sm-6
+            .project2-block
+              img.fluid(src="/images/tictactoe.png")
+            .overlay
+              a(href="https://github.com/YankeeSoccerNut/tictactoe" target="_blank") 
+                img(src="/images/resizedOctocat.png" alt="access code on Github")
+              h3 Project Sample 2 
+              p Technologies used: 
+              br
+              | Tech 1, Tech 2, Tech 3, Tech 4 
+          .project.sample-project3.col-sm-6
+            .project3-block
+              img.fluid(src="/images/resizedBlackjack.png")
+            .overlay
+              a(href="https://github.com/YankeeSoccerNut/blackjack" target="_blank") 
+                img(src="/images/resizedOctocat.png" alt="access code on Github")
+              h3 Project Sample 3 
+              p Technologies used: 
+              br
+              | Tech 1, Tech 2, Tech 3, Tech 4 
+              br
+          .project.sample-project4.col-sm-6
+            .project4-block
+              img.fluid(src="/images/spaceEvader.png")
+            .overlay
+              a(href="https://github.com/YankeeSoccerNut/spaceEvader" target="_blank") 
+                img(src="/images/resizedOctocat.png" alt="access code on Github")
+              h3 Project Sample 4 
+              p Technologies used: 
+              br
+              | Tech 1, Tech 2, Tech 3, Tech 4 
+    .contact-wrapper.text-center
       .contact#contact
         h2 Get In Touch with Scott Anderson
         p You can reach me across a variety of social media.  The best is email or LinkedIn.  Checkout my GitHub account to see what I'm working now.  My current resume is also available.

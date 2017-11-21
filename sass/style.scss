@@ -1,8 +1,8 @@
+//enable bootstrap media queries....
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/mixins";
 
-//bootstrap media queries....
 
 @include media-breakpoint-down(lg) {
   #head-shot {
@@ -15,6 +15,11 @@
   }
 }
 
+@include media-breakpoint-down(xs) {
+  #head-shot {
+    transform: scale(.3);
+  }
+}
 
 @include media-breakpoint-up(xl) {
   #head-shot {
@@ -22,27 +27,86 @@
   }
 }
 
-
 body {
-  font-family: Roboto, sans-serif;
-  margin: 0;
+ // background: #aaf9ef;  // picked from the water...
+  background: #e2f7fd; // picked from the sky
+  font-family: Muli, sans-serif;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
 }
 
 
-no-padding{
-  padding-left: 0;
-  padding-right: 0;
+.img-fill {
+  display: block;
+  width: 100%;
+  height: auto;
 }
-
 #head-shot {
-  border: 15px solid white;
+  border: 10px solid white;
   border-radius: 100%;
   margin-top: -105px;
   width: 200px;
-  float: right;
+  float:right;
 }
 
+.featured-split-video, .featured-split-code {
+  display: inline-block;
+}
+
+.sample-project1 {
+  float:left;
+}
 .fa-youtube-play{
   height: auto;
   width: 10px;
+}
+// sample Projects
+.project {
+  border: 4px solid black;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+// overlays on hover
+.overlay {
+  height: 100%;
+  z-index: 200;
+  transition: all 0.7s ease;
+  padding-top: 40px
+}
+.no-touchevents .project:hover .overlay,
+.project.hover .overlay {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  background: white;
+    opacity: 0.9;
+    top: 0;
+}
+.overlay h3 {
+  margin-top: 0;
+  font-family: 'Blanc-Medium';
+  text-transform: uppercase;
+}
+
+.overlay p,
+.overlay h3,
+.project a {
+  color: black;
+  text-decoration: none;
+}
+.overlay button {
+  color: black;
+  padding: 21px;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: #9bd9f2;
+  color: white;
+}
+.overlay button:hover {
+  transition: all 0.7s ease;
+  background: #7c7e82;
 }

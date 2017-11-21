@@ -11,24 +11,26 @@ html
     script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous")
     
-    script(src="https://use.fontawesome.com/fd2fac5d60.js")
-
+    <!-- script(src="https://use.fontawesome.com/fd2fac5d60.js") -->
     <!-- My JS and CSS -->
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Muli")
   body
   .container-fluid
   <!-- Navbar -->
-    .navbar.navbar-expand-sm.navbar-light.bg-light
+    .navbar.navbar-expand-sm.navbar-dark.bg-dark
       a.navbar-header(href="https://www.linkedin.com/in/scottandersonga/") Scott Anderson
       button.navbar-toggler( type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation") 
         a.span.navbar-toggler-icon
       .collapse.navbar-collapse#navbarContent
         ul.navbar-nav.mr-auto.mt-2.mt-lg-0
           li.nav-item.active
-            a.nav-link(href="#") Contact
+            a.nav-link(href="#contact") Contact
           li.nav-item.active
-            a.nav-link(href="#") Portfolio 
+            a.nav-link(href="#featured") Featured Project
           li.nav-item.active
-            a.nav-link(href="#") About
+            a.nav-link(href="#portfolio") Sample Projects 
+          li.nav-item.active
+            a.nav-link(href="#head-shot") About
     block content
         
