@@ -2,22 +2,28 @@
   #head-shot {
     transform: scale(0.75); }
 
+  #better-cash-flow-logo {
+    transform: scale(0.75); }
+
   div[class^="project-"] img {
     transform: scale(0.75); } }
 @media (max-width: 991px) {
   #head-shot {
     transform: scale(0.5); }
 
+  #head-shot, #better-cash-flow-logo {
+    transform: scale(0.5); }
+
   div[class^="project-"] img {
     transform: scale(0.5); } }
 @media (max-width: 575px) {
-  #head-shot {
+  #head-shot, #better-cash-flow-logo {
     transform: scale(0.3); }
 
   div[class^="project-"] img {
     transform: scale(0.3); } }
 @media (min-width: 1200px) {
-  #head-shot {
+  #head-shot, #better-cash-flow-logo {
     transform: scale(1); } }
 body {
   background: #e2f7fd;
@@ -54,6 +60,9 @@ body {
 
 .featured-split-code {
   display: inline-block; }
+
+.portfolio-wrapper {
+  display: block; }
 
 .sample-project1 {
   float: left; }

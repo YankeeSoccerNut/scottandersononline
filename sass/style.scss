@@ -7,12 +7,17 @@
 
 
 ///////////////////////////////////////
-// Scale headshot based on breakpoints
+// Scale images based on breakpoints
 ///////////////////////////////////////
 @include media-breakpoint-down(lg) {
   #head-shot {
     transform: scale(.75);
   }
+
+  #better-cash-flow-logo {
+    transform: scale(.75);
+  }
+
   div[class^="project-"] img{
     transform: scale(.75);
   }
@@ -21,13 +26,18 @@
   #head-shot {
     transform: scale(.5);
   }
+
+  #head-shot, #better-cash-flow-logo {
+    transform: scale(.5);
+  }
+
   div[class^="project-"] img{
     transform: scale(.5);
   }
 }
 
 @include media-breakpoint-down(xs) {
-  #head-shot {
+  #head-shot, #better-cash-flow-logo {
     transform: scale(.3);
   }
   div[class^="project-"] img{
@@ -36,7 +46,7 @@
 }
 
 @include media-breakpoint-up(xl) {
-  #head-shot {
+  #head-shot, #better-cash-flow-logo {
     transform: scale(1);
   }
 }
@@ -81,6 +91,9 @@ body {
   display: inline-block;
 }
 
+.portfolio-wrapper {
+  display:block;
+}
 .sample-project1 {
   float:left;
 }
