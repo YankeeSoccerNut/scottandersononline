@@ -1,76 +1,68 @@
 extends layout
 block content
-    
-    img.img-fluid.img-fill.rounded#banner-image(src="/images/resizedBostonHarbor3.jpg")
-    img.img-fluid#head-shot(src="/images/scott_headshot.jpg")
-    h2 Hi, I'm Scott 
-    p I'm a Full Stack Web Developer with previous experience in enterprise systems.  I grew up in a small town just outside of Boston and have been living in Atlanta since 1995.  It's a great place to live and I absolutely love it here.
-    p I've kept close to technology and have always been interested in doing more programming and application development.  In July 2017 I decided to go "full bore" and enrolled in DigitalCrafts's intensive, 16-week bootcamp program.  I completed the program and earned the title "Class Einstein" for my ability to make connections across technologies and practically apply these to my project work.
-    h3#featured Featured Project:  Better Cash Flow
+  .grid-container
+    .intro-header  
+      img.img-fluid.img-fill.rounded#banner-image(src="/images/resizedBostonHarbor3.jpg")
+      img.img-fluid#head-shot(src="/images/scott_headshot.jpg")
+      h2 Hi, I'm Scott 
+      p I'm a Full Stack Web Developer with previous experience in enterprise systems.  I grew up in a small town just outside of Boston and have been living in Atlanta since 1995.  It's a great place to live and I absolutely love it here.
+      p I've kept close to technology and have always been interested in doing more programming and application development.  In July 2017 I decided to go "full bore" and enrolled in DigitalCrafts's intensive, 16-week bootcamp program.  I completed the program and earned the title "Class Einstein" for my ability to make connections across technologies and practically apply these to my project work.
     .featured-wrapper
+      h3#featured.text-center Featured Project:  Better Cash Flow
       .featured.text-center#better-cash-flow-logo
         a(href="http://bcf.scottandersononline.com" target="_blank") 
           img(src="/images/cashflow-logo.png" alt="BetterCashFlow logo")
       p Better Cash Flow enables small business owners to model cash or credit allocations against payables.  The goal is to help them make better use of financial resources and avoid the cash crunch that sinks so many small businesses.  This project grew out of a "Hack Big for Small Business" hackathon event sponsored by USBank, VISA, and Elavon in December 2017.
-      p.text-center Watch the video below for a quick glimpse of its key feature -- instant feedback on the effect of cash or credit allocations.  You can click on the Octocat to explore the project on Github.
-    .featured-split.text-center
-      .featured-split-video
-        a(href="https://youtu.be/MWlJcrNcJJw" target="_blank") 
-          img(src="/images/instant-feedback.png" alt="short video clip")
+      p.text-center Watch the video below for a quick glimpse of its key feature -- instant feedback on the effect of cash or credit allocations.  
+      .featured-split.text-center
+        .featured-split-video
+          a(href="https://youtu.be/MWlJcrNcJJw" target="_blank") 
+            img(src="/images/instant-feedback.png" alt="short video clip")
+          a(href="https://github.com/YankeeSoccerNut/BetterCashFlow" target="_blank") 
+            img(src="/images/resizedOctocat.png" alt="access code on Github")
+    h3#other-samples.text-center Other Sample Projects 
+    .project.project-1
+      img.img-fill(src="/images/BCFScreenshot.png")
+      .overlay
         a(href="https://github.com/YankeeSoccerNut/BetterCashFlow" target="_blank") 
           img(src="/images/resizedOctocat.png" alt="access code on Github")
-              
-    .portfolio-wrapper
-      .portfolio#portfolio
-        h3 Other Sample Projects 
-        p Here's a set of sample projects.  If you have any feedback or would like to know about some other things I've done, just let me know!  My contact info can be found at the top and the bottom of this page.
-        .row
-          .project.sample-project1.col-sm-6
-            .project-1
-              img.fluid(src="/images/resizedMeterMiserLocations.png")
-            .overlay
-              a(href="https://github.com/mcfarland422/MeterMiser_v2" target="_blank") 
-                img(src="/images/resizedOctocat.png" alt="access code on Github")
-              h3 meterMiser:  Locations View 
-              p Technologies used: javascript, HTML, CSS, Google API, Honeywell API
-              p Favorite Features: real-time temp request with utility function, use of Google boundaries to set zoom level
-          .project.sample-project2.col-sm-6
-            .project-2
-              img.fluid(src="/images/resizedMeterMiserLocations.png")
-            .overlay
-              a(href="https://github.com/mcfarland422/MeterMiser_v2" target="_blank") 
-                img(src="/images/resizedOctocat.png" alt="access code on Github")
-              h3 meterMiser:  Locations View 
-              p Technologies used: javascript, HTML, CSS, Google API, Honeywell API
-              p Favorite Features: real-time temp request with utility function, use of Google boundaries to set zoom level
-          .project.sample-project3.col-sm-6
-            .project-3
-              img.fluid(src="/images/tictactoe.png")
-            .overlay
-              a(href="https://github.com/YankeeSoccerNut/tictactoe" target="_blank") 
-                img(src="/images/resizedOctocat.png" alt="access code on Github")
-              h3 Tic Tac Toe 
-              p Technologies used: HTML, javascript, CSS
-              p Favorite Features:  nod to War Games, beginnings of computer 'intelligence' 
-          .project.sample-project4.col-sm-6
-            .project-4
-              img.fluid(src="/images/spaceEvader.png")
-            .overlay
-              a(href="https://github.com/YankeeSoccerNut/spaceEvader" target="_blank") 
-                img(src="/images/resizedOctocat.png" alt="access code on Github")
-              h3 spaceEvader 
-              p Technologies Used: Python, pygame
-              p Favorite Features: multi-channel sound, Vader transistion to "hunted" on Yoda light saber collision
+        h3 Better Cash Flow 
+        p Technologies used: javascript, HTML, CSS, React/Redux, Passport (local and JWT), Express, mySQL
+        p Favorite Features: real-time temp request with utility function, use of Google boundaries to set zoom level
+    .project.project-2
+      img.img-fill(src="/images/resizedMeterMiserLocations.png")
+      .overlay
+        a(href="https://github.com/mcfarland422/MeterMiser_v2" target="_blank") 
+          img(src="/images/resizedOctocat.png" alt="access code on Github")
+        h3 meterMiser
+        p Technologies used: javascript, HTML, CSS, Express, Google API, Honeywell API, Twilio API, mySQL
+        p Favorite Features: real-time temp request with utility function, use of Google boundaries to set zoom level, SMS messaging via Twilio
+    .project.project-3
+      img.img-fill(src="/images/tictactoe.png")
+      .overlay
+        a(href="https://github.com/YankeeSoccerNut/tictactoe" target="_blank") 
+          img(src="/images/resizedOctocat.png" alt="access code on Github")
+        h3 Tic Tac Toe 
+        p Technologies used: HTML, javascript, CSS
+        p Favorite Features:  nod to War Games, beginnings of computer 'intelligence' 
+    .project.project-4
+      img.img-fill(src="/images/spaceEvader.png")
+      .overlay
+        a(href="https://github.com/YankeeSoccerNut/spaceEvader" target="_blank") 
+          img(src="/images/resizedOctocat.png" alt="access code on Github")
+        h3 spaceEvader 
+        p Technologies Used: Python, pygame
+        p Favorite Features: multi-channel sound, Vader transistion to "hunted" on Yoda light saber collision
     .contact-wrapper.text-center
       .contact#contact
         h2 Get In Touch with Scott Anderson
         p You can reach me across a variety of social media.  The best is email or LinkedIn.  Checkout my GitHub account to see what I'm working now.  My current resume is also available.
         .contact-buttons
           a(href="mailto:sanderson30068@gmail.com")
-            img.img-fluid(src="images/email-grey.png" data-toggle="tooltip" title="Email")
+            img.img-fluid.rise(src="images/email-grey.png" data-toggle="tooltip" title="Email")
           a(href="https://www.linkedin.com/in/scottandersonga/")
-            img.img-fluid(src="images/linkedIn-grey.png" data-toggle="tooltip" title="LinkedIN")
+            img.img-fluid.rise(src="images/linkedIn-grey.png" data-toggle="tooltip" title="LinkedIN")
           a(href="https://github.com/YankeeSoccerNut")
-            img.img-fluid(src="images/github-grey.png" data-toggle="tooltip" title="GitHub")
+            img.img-fluid.rise(src="images/github-grey.png" data-toggle="tooltip" title="GitHub")
           a(href="/scottanderson.pdf")
-            img.img-fluid(src="images/pdf-grey.png" data-toggle="tooltip" title="Resume")
+            img.img-fluid.rise(src="images/pdf-grey.png" data-toggle="tooltip" title="Resume")

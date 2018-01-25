@@ -54,60 +54,84 @@ body {
   width: 200px;
   float: right; }
 
-.featured-split-video img {
-  float: left;
-  padding-left: 15%; }
+.grid-container {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  grid-template-areas: "header header" "featured featured" "other other" "project1 project2" "project3 project4" "footer   footer"; }
 
-.featured-split-code {
-  display: inline-block; }
+.intro-header {
+  grid-column: header-start / header-end; }
 
-.portfolio-wrapper {
-  display: block; }
+.featured-wrapper {
+  grid-column: featured-start / featured-end;
+  grid-row-end: featured-end; }
 
-.sample-project1 {
-  float: left; }
+#other-samples {
+  grid-column: other-start / other-end;
+  grid-row-end: other-end; }
 
-.fa-youtube-play {
-  height: auto;
-  width: 10px; }
+.project1 {
+  grid-column: project1-start / project1-end;
+  grid-row: project1-end; }
+
+.project2 {
+  grid-column: project2-start / project2-end;
+  grid-row: project2-end; }
+
+.project3 {
+  grid-column: project3-start / project3-end;
+  grid-row: project3-end; }
+
+.project4 {
+  grid-column: project4-start / project4-end;
+  grid-row: project4-end; }
+
+.contact-wrapper {
+  grid-column: footer-start / footer-end;
+  grid-row-end: footer-end; }
 
 .project {
-  display: inline-block;
-  border: 4px solid black;
-  overflow: hidden;
-  text-align: center;
-  position: relative; }
+  display: grid;
+  grid-template-columns: 1;
+  grid-template-rows: 1; }
 
-.overlay h3 {
-  background-color: #4CAF50;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px; }
+.project img {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down; }
 
-h3 {
-  text-align: center; }
+.project .overlay {
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  position: relative;
+  transition: .5s ease;
+  /* transform: translateY(100%); */
+  opacity: 0;
+  display: grid;
+  justify-items: center;
+  align-items: start; }
 
-.project1-block, .project2-block, .project3-block, .project4-block {
+.project-1, .project-2, .project-3, .project-4 {
   opacity: 1;
-  display: block;
+  display: grid;
+  align-items: start;
   width: 100%;
   height: auto;
   transition: .5s ease;
   backface-visibility: hidden; }
 
-.overlay {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%); }
-
-.project:hover div[class^="project-"] {
+.project:hover .img-fill {
   opacity: 0.1; }
 
 .project:hover .overlay {
   opacity: 1; }
+
+.rise:hover {
+  transform: translateY(-10%);
+  transition: .1s ease; }
 
 /*# sourceMappingURL=style.css.map */
