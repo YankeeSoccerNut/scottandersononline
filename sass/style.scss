@@ -14,18 +14,18 @@ body {
   margin-bottom: 50px;
 }
 
-// Use Google's recommendations on font-size...
+// Larger font
 
 html {
-  font-size: 16px;
+  font-size: 24px;
 }
-p {
+/* p {
   font-size: 120%;
 }
 
 h1 {
   font-size: 250%;
-}
+} */
 
 .container{
   padding-left: 0px;
@@ -172,8 +172,9 @@ h1 {
 }
 
 ///////////////////////////////////////
-// Scale images based on breakpoints
+// Scale images based on screen size
 ///////////////////////////////////////
+
 @include media-breakpoint-down(lg) {
   #head-shot {
     transform: scale(.75);
@@ -243,7 +244,7 @@ h1 {
 
   body {
     font-size: 150%;
-    /* color: red; for testing */
+    color: red; /* for testing */
   }
 }
 
@@ -252,3 +253,8 @@ h1 {
     transform: scale(1);
   }
 }
+
+/* @include media-between(xs,sm){
+
+}
+ */
